@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+::root {
+    --color-primar: #edebeb;
+    --color-secondary: #2d2d2d;
+
+    --color-gray: #a9a9a9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #edebeb;
+    background-color: #1e1e1e;
+
+    min-height: 100vh;
+}
+
+/* Layout */
+
+.game {
+    display: flex;
+}
+
+.container {
+    max-width: 100vh;
+    margin: 2rem auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name {
+    padding: 2rem;
+    margin-top: 6rem;
+}
+
+.heart {
+    margin: 0.5rem;
+    /* animation: pop 3s ease-in-out; */
+    animation: pop 0.8s linear 1;
+}
+
+#selected-move-image--0 {
+    box-sizing: content-box;
+    margin-top: 5rem;
+    height: 25rem;
+}
+
+#selected-move-image--1 {
+    box-sizing: content-box;
+    margin-top: 5rem;
+    height: 25rem;
+}
+
+.seperator {
+    margin-top: 4rem;
+    width: 350px;
+    height: 1px;
+    background-color: #4c4c4c;
+}
+
+.player-move {
+    margin-top: 2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.player-move__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    cursor: pointer;
+}
+
+.player-move__container:first-child {
+    margin-right: 1rem;
+}
+
+.player-move__container img {
+    height: 5rem;
+    transition: 0.1s ease-in-out;
+}
+
+.player-move__container img:hover {
+    transform: translateY(-5px);
+}
+
+.move {
+    color: #a9a9a9;
+}
+
+.instructions {
+    margin-top: 3rem;
+    color: #a9a9a9;
+}
+
+.player-move--1 {
+    visibility: hidden;
+    margin-top: 10.3rem;
+}
+
+.instructions--1 {
+    margin-top: 3rem;
+    color: #a9a9a9;
+}
+
+.instructions:last-child {
+    margin-top: 6rem;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.divider {
+    height: 100vh;
+    width: 1px;
+    background-color: #4c4c4c;
+}
+
+.heart--lost {
+    visibility: hidden;
+}
+
+/* Botton */
+#play-again {
+    position: absolute;
+    right: 4rem;
+
+    align-items: center;
+    background-color: #edebeb;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
+    box-sizing: border-box;
+    color: #1e1e1e;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+#play-again:hover {
+    box-shadow: #1e1e1e 0 0 0 3px, transparent 0 0 0 0;
+}
+
+/* Heart animation */
+@keyframes pop {
+    50% {
+        transform: scale(1.2);
+    }
+}

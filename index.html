@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Rock, paper, scissors</title>
+    </head>
+    <body>
+        <div class="game">
+            <section class="player player--0 container">
+                <h2 class="name" id="name--0">Player</h2>
+                <p class="lives" id="lives--player">
+                    <img src="img/heart.svg" alt="heart" class="heart" />
+                    <img src="img/heart.svg" alt="heart" class="heart" />
+                    <img src="img/heart.svg" alt="heart" class="heart" />
+                </p>
+
+                <img id="selected-move-image--0" src="" alt="" />
+
+                <div class="seperator"></div>
+
+                <div class="player-move">
+                    <div class="player-move__container">
+                        <img src="img/rock.svg" alt="rock" id="rock--0" />
+                        <span class="move">Rock</span>
+                    </div>
+                    <div class="player-move__container">
+                        <img src="img/paper.svg" alt="paper" id="paper--0" />
+                        <span class="move">Paper</span>
+                    </div>
+                    <div class="player-move__container">
+                        <img
+                            src="img/scissors.svg"
+                            alt="scissors"
+                            id="scissors--0"
+                        />
+                        <span class="move">Scissors</span>
+                    </div>
+                </div>
+                <span class="instructions instructions--0"
+                    >Choose your move</span
+                >
+                <span class="instructions">
+                    The player who has hearts left when the game ends is the
+                    winner</span
+                >
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="player player--1 container">
+                <h2 class="name" id="name--1">Computer</h2>
+                <p class="lives" id="lives--computer">
+                    <img src="img/heart.svg" alt="heart" class="heart" />
+                    <img src="img/heart.svg" alt="heart" class="heart" />
+                    <img src="img/heart.svg" alt="heart" class="heart" />
+                </p>
+
+                <img id="selected-move-image--1" src="" alt="" />
+
+                <div class="seperator"></div>
+
+                <div class="player-move--1">
+                    <!-- <div class="player-move__container">
+                        <img src="img/rock.svg" alt="rock" id="rock--1" />
+                        <span class="move">Rock</span>
+                    </div>
+                    <div class="player-move__container">
+                        <img src="img/paper.svg" alt="paper" id="paper--1" />
+                        <span class="move">Paper</span>
+                    </div>
+                    <div class="player-move__container">
+                        <img
+                            src="img/scissors.svg"
+                            alt="scissors"
+                            id="scissors--1"
+                        />
+                        <span class="move">Scissors</span>
+                    </div> -->
+                </div>
+                <span class="instructions--1"></span>
+                <!-- <span class="instructions"
+                    >The player with the most amount of points wins</span
+                > -->
+                <button id="play-again">Play Again</button>
+            </section>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
