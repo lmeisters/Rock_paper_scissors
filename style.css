@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 
-::root {
-    --color-primar: #edebeb;
-    --color-secondary: #2d2d2d;
+:root {
+    --color-primary: #edebeb;
+    --color-secondary: #1e1e1e;
 
     --color-gray: #a9a9a9;
+
+    /*900px*/
+    --bp-medium: 56.25em;
 }
 
 * {
@@ -27,8 +30,8 @@ body {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
-    color: #edebeb;
-    background-color: #1e1e1e;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
 
     min-height: 100vh;
 }
@@ -37,10 +40,14 @@ body {
 
 .game {
     display: flex;
+
+    @media screen and (max-width: 900px) {
+        flex-direction: column-reverse;
+    }
 }
 
 .container {
-    max-width: 100vh;
+    flex: 1;
     margin: 2rem auto;
 
     display: flex;
@@ -51,6 +58,10 @@ body {
 .name {
     padding: 2rem;
     margin-top: 6rem;
+
+    @media screen and (max-width: 900px) {
+        margin-top: 0;
+    }
 }
 
 .heart {
@@ -109,12 +120,12 @@ body {
 }
 
 .move {
-    color: #a9a9a9;
+    color: var(--color-gray);
 }
 
 .instructions {
     margin-top: 3rem;
-    color: #a9a9a9;
+    color: var(--color-gray);
 }
 
 .player-move--1 {
@@ -124,19 +135,25 @@ body {
 
 .instructions--1 {
     margin-top: 3rem;
-    color: #a9a9a9;
+    color: var(--color-gray);
 }
 
 .instructions:last-child {
     margin-top: 6rem;
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     text-align: center;
+    padding: 0 4rem;
 }
 
 .divider {
     height: 100vh;
     width: 1px;
     background-color: #4c4c4c;
+
+    @media screen and (max-width: 900px) {
+        width: 100vw;
+        height: 1px;
+    }
 }
 
 .heart--lost {
@@ -149,11 +166,11 @@ body {
     right: 4rem;
 
     align-items: center;
-    background-color: #edebeb;
+    background-color: var(--color-primary);
     border-radius: 12px;
     box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
     box-sizing: border-box;
-    color: #1e1e1e;
+    color: var(--color-secondary);
     cursor: pointer;
     display: inline-flex;
     flex: 1 1 auto;
@@ -174,7 +191,7 @@ body {
 }
 
 #play-again:hover {
-    box-shadow: #1e1e1e 0 0 0 3px, transparent 0 0 0 0;
+    box-shadow: var(--color-secondary) 0 0 0 3px, transparent 0 0 0 0;
 }
 
 /* Heart animation */

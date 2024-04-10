@@ -5,7 +5,6 @@ const resultDisplay = document.querySelector(".instructions--0");
 const resultDisplay1 = document.querySelector(".instructions--1");
 const playerMoveImage = document.getElementById("selected-move-image--0");
 const computerMoveImage = document.getElementById("selected-move-image--1");
-
 const playAgainButton = document.getElementById("play-again");
 
 // Event listeners for player moves
@@ -28,7 +27,7 @@ let gameActive = true; // Global variable to track game status
 
 // Generate computer's move
 function generateComputerMove() {
-    const moves = ["Rock", "Paper", "Scissors"];
+    const moves = ["rock", "paper", "scissors"];
     const randomIndex = Math.floor(Math.random() * 3);
     resultDisplay1.textContent = `Computer chose ${moves[randomIndex]}!`;
     return moves[randomIndex];
